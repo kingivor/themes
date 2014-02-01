@@ -29,7 +29,7 @@
 
         <div id="page" class="hfeed site">
 
-            <?php
+<?php /*?>            <?php
             if ( has_nav_menu('top-bar-l') || has_nav_menu('top-bar-r') ) {
                 $topbar_args = array(
                     'title'     => reactor_option('topbar_title', get_bloginfo('name')),
@@ -39,7 +39,7 @@
                 );
                 reactor_top_bar( $topbar_args );
             } ?>
-
+<?php */?>
             <header id="header" class="site-header">
                 <div class="row">
                     <div class="<?php reactor_columns( 12 ); ?> site-branding">
@@ -51,10 +51,15 @@
                             </a>
                         </div><!-- .site-logo -->
                         <?php endif; // end if logo ?>
-                        <div class="title-area">
+						
+						
+<?php /*?>                        <div class="title-area">
                             <p class="site-title"><a href="<?php echo esc_url( home_url('/') ); ?>" title="<?php echo esc_attr( get_bloginfo('name', 'display') ); ?>" rel="home"><?php bloginfo('name'); ?></a></p>
                             <p class="site-description"><?php bloginfo('description'); ?></p>
                         </div>
+<?php */?>
+
+<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
 
                     </div><!-- .columns -->
                 </div><!-- .row -->

@@ -72,10 +72,10 @@ function reactor_child_theme_setup() {
 	// remove_theme_support('reactor-fonts');
 	
 	/* Remove support for custom login options in customizer */
-	// remove_theme_support('reactor-custom-login');
+	 remove_theme_support('reactor-custom-login');
 	
 	/* Remove support for breadcrumbs function */
-	// remove_theme_support('reactor-breadcrumbs');
+	 remove_theme_support('reactor-breadcrumbs');
 	
 	/* Remove support for page links function */
 	// remove_theme_support('reactor-page-links');
@@ -84,15 +84,29 @@ function reactor_child_theme_setup() {
 	// remove_theme_support('reactor-post-meta');
 	
 	/* Remove support for taxonomy subnav function */
-	// remove_theme_support('reactor-taxonomy-subnav');
+	 remove_theme_support('reactor-taxonomy-subnav');
 	
 	/* Remove support for shortcodes */
 	// remove_theme_support('reactor-shortcodes');
 	
 	/* Remove support for tumblog icons */
-	// remove_theme_support('reactor-tumblog-icons');
+	 remove_theme_support('reactor-tumblog-icons');
 	
 	/* Remove support for other langauges */
-	// remove_theme_support('reactor-translation');
+	 remove_theme_support('reactor-translation');
 		
 }
+
+
+
+// Remove admin bar from front end while logged in
+
+add_filter('show_admin_bar', '__return_false');
+
+function register_my_menus() {
+  register_nav_menus(
+    array(
+      'header-menu' => __( 'Header Menu' )    )
+  );
+}
+add_action( 'init', 'register_my_menus' );
