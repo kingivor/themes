@@ -1,0 +1,186 @@
+/*
+* MIXITUP Boilerplate Template Stylesheet
+*/
+
+/* ------ DEFAULTS ------ */
+
+/*html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section{
+	display: block;
+}
+
+table{
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-weight: normal;
+}
+
+a{
+	text-decoration: none;
+}
+
+nav li{
+	list-style-type: none;
+	display: inline-block;
+}*/
+
+/* ------ BOILERPLATE TEMPLATE ------ */
+
+/*body{
+	font-family: 'Open Sans';
+}
+*/
+.discog {
+	max-width: 100%;
+}
+h1 {
+/*margin-bottom: 30px;*/
+}
+.fail-message {
+	display: none;
+}
+.fail .fail-message {
+	display: block;
+	font-size: 1.8em;
+	color: #fff;
+	font-family: "moroder-heading", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	letter-spacing: -1px;
+}
+#Filters {
+	margin-bottom: 2em;
+	overflow: auto;
+}
+#Filters .columns:first-of-type {
+	padding-left: 0;
+}
+#Filters .columns:last-of-type {
+	padding-right: 0;
+}
+/*#primary .discog h2{
+color: #FFFFFF;
+font-size: 1.3em;
+}
+#primary .discog .controls h2 {
+  border: medium none;
+  color: #FFFFFF;
+  font-size: 1.3em;
+  margin-top: 0.8em;
+  margin-bottom:0.2em;
+}
+*/
+.controls {
+	display: inline-block;
+	width: 33%;
+	margin: 0 0 1em;
+	vertical-align: top;
+	font-family: "moroder-heading", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.controls ul {
+	margin: 0;
+	float: left;
+	margin-top: 4px;
+}
+.controls li {
+	color: #FFF;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 0.9em;
+	list-style-type: none;
+	margin-bottom: 1em;
+	margin-right: 1em;
+	text-transform: uppercase;
+	border: 2px solid #fff;
+	border-radius: 5px;
+	padding: 0.1em 0.5em;
+	transition: background-color 200ms ease-out 0s;
+}
+.controls li:last-of-type {
+	margin-right: 0;
+}
+.controls li.active, .controls li:hover {
+	/*  background: none repeat scroll 0 0 #543621;*/
+	color: #000;
+	background: #fff;
+}
+#Grid img {
+	padding: 3px;
+	/*	margin-bottom:20%;*/
+	background: #fff;
+}
+#Grid img:hover {
+	background: #FC0416;
+}
+hr {
+	margin: 0 0 30px;
+	height: 0;
+	border: 0 none;
+	border-top: 1px solid #eee;
+}
+#Grid {
+	width: 100%;
+	text-align: justify;
+	/*font-size: 0.1px;*/
+	margin: 0;
+}
+#Grid:after {
+	content: '';
+	display: inline-block;
+	width: 100%;
+}
+#Grid .mix {
+	display: none;
+	opacity: 0;
+	margin-bottom: 1.5em;
+	max-height: 350px;
+	vertical-align: top;
+	width: 18%;
+}
+#Grid .gap {
+	display: inline-block;
+	width: 18%;
+}
+
+	@media only screen and (max-width:640px) {
+		#Grid .mix {
+			max-height: 350px;
+			width: 48%;
+		}
+		#Grid .gap {
+			width: 48%;
+		}
+.controls li {
+  font-size: 1.4em;
+  margin-bottom: 1.3em;
+  padding: 0.75em;
+  width: 43%;
+}
+.post-type-archive-discography #Filters h4 {
+  clear: both;
+  float: none;
+}
+
+
+
+	}

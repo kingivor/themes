@@ -1,0 +1,1111 @@
+/*
+Theme Name: Giorgio Moroder
+Template: reactor
+Description: A responsive WordPress theme built with ZURB's <a href="http://foundation.zurb.com">Foundation</a>.
+Version: 1.5
+Author: Dan Rowan
+Author URI: http://thedanrowan.com
+*/
+
+body {
+	color: #fff;
+	font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	/*background: url("http://giorgiomoroder.com/wp-content/themes/moroder/library/img/body-bg.jpg") no-repeat scroll center top #000000;*/
+	background: #000000;
+}
+
+[class*="column"] + [class*="column"]:last-child { float: left;}
+
+img {	max-width: 100%;	}
+
+/*****************/
+/***SPLASH PAGE***/
+/*****************/
+
+.page-template-page-templatesmoroder-splash-php header,
+.page-template-page-templatesmoroder-splash-php footer { display:none; }
+.splash-image {text-align:center; margin-top:1em; }
+#primary .splash-image img {/*border:1px solid #666;*/ margin-top:1em; }
+
+
+
+/************/
+/***HEADER***/
+/************/
+
+.site-header {}
+.inner-header {
+	border-bottom: none;
+	margin: 0;
+	padding:0;
+}
+
+.header-wrap { background: #fff; border-radius:0 0 5px 5px; }
+
+.site-header .site-logo {
+	max-width: 100%;
+	margin: 3.8em 0 0;
+	text-align: left;
+}
+.site-header .site-logo-head {
+	margin: 0.935em 0;
+	max-width: 100%;
+	padding-left: 2.815em;
+	text-align: center;
+}
+.site-header .site-nav {
+	margin: 0.5em 0 0;
+	text-align: left;
+}
+
+
+
+/*******************/
+/***SOCIAL SPRITE***/
+/*******************/
+
+.site-social { float:right; margin-top:4.48em;}
+.site-social ul { float:right; margin:0;}
+.site-social li {
+	display:inline;
+	list-style-type:none;
+	margin: 0 0.8em 0 0;
+	float:left;
+}
+
+
+
+.social-nav li {
+	background: url("http://giorgiomoroder.com/wp-content/themes/moroder/library/img/social-sprite.png") no-repeat;
+	width: 24px;
+	height: 24px;
+	transition: background-color 300ms ease-out 0s	
+}
+.social-nav li a {
+	text-indent:-999em;
+
+}
+.social-nav .fb { background-position: 0 0;}
+.social-nav .twit { background-position: -50px 0;}
+.social-nav .sc { background-position: -100px 0;}
+.social-nav .insta { background-position: -150px 0;}
+.social-nav .spot { background-position: -200px 0;}
+.social-nav .googleplus { background-position: -250px 0;}
+
+.social-nav .fb:hover { background-position: 0 -50px;}
+.social-nav .twit:hover { background-position: -50px -50px;}
+.social-nav .sc:hover { background-position: -100px -50px;}
+.social-nav .insta:hover { background-position: -150px -50px;}
+.social-nav .spot:hover { background-position: -200px -50px;}
+.social-nav .googleplus:hover { background-position: -250px -50px;}
+
+
+/*******************************/
+/***RESPONSIVE YOUTUBE EMBEDS***/
+/*******************************/
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+	margin-bottom:1em;
+}
+ 
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/***********/
+/***TOUCH***/
+/***********/
+
+/* 
+	If you're on a touch device,
+	hide all parts tagged with the class
+	"hide-from-touch" which are desktop
+	only buttons/parts that open Flash demos 
+*/
+
+.touch .hide-from-touch {
+	display: none !important;
+}
+/* 
+	If you're on a desktop (most likely), 
+	hide all parts tagged with the class
+	"hide-from-no-touch" 
+	which are touch only buttons that open
+	slideshows instead of Flash
+*/   
+
+.no-touch .hide-from-no-touch {
+	display: none !important;
+}
+
+
+/***********/
+/***FONTS***/
+/***********/
+
+	
+@font-face {
+	font-family: 'moroder-heading';
+	src: url('http://giorgiomoroder.com/wp-content/themes/moroder/library/fonts/BentonSansComp-Bold.eot');
+	src: local('?'),  url('http://giorgiomoroder.com/wp-content/themes/moroder/library/fonts/BentonSansComp-Bold.woff') format('woff'),  url('http://giorgiomoroder.com/wp-content/themes/moroder/library/fonts/BentonSansComp-Bold.ttf') format('truetype'),  url('http://giorgiomoroder.com/wp-content/themes/moroder/library/fonts/BentonSansComp-Bold.svg') format('svg');
+	font-weight: 400;
+}
+@font-face {
+	font-family: 'fancy';
+	src: url('http://giorgiomoroder.com/wp-content/themes/moroder/library/fonts/DidotLTStd-Headline.eot');
+	src: local('?'),  url('http://giorgiomoroder.com/wp-content/themes/moroder/library/fonts/DidotLTStd-Headline.woff') format('woff'),  url('http://giorgiomoroder.com/wp-content/themes/moroder/library/fonts/DidotLTStd-Headline.ttf') format('truetype'),  url('http://giorgiomoroder.com/wp-content/themes/moroder/library/fonts/DidotLTStd-Headline.svg') format('svg');
+	font-weight: 400;
+}
+@font-face {
+	font-family: 'fancy-italic';
+	src: url('http://giorgiomoroder.com/wp-content/themes/moroder/library/fonts/DidotLTStd-Italic.eot');
+	src: local('?'),  url('http://giorgiomoroder.com/wp-content/themes/moroder/library/fonts/DidotLTStd-Italic.woff') format('woff'),  url('http://giorgiomoroder.com/wp-content/themes/moroder/library/fonts/DidotLTStd-Italic.ttf') format('truetype'),  url('http://giorgiomoroder.com/wp-content/themes/moroder/library/fonts/DidotLTStd-Italic.svg') format('svg');
+	font-weight: 400;
+}
+@font-face {
+	font-family: 'ElegantIcons';
+	src:url('http://giorgiomoroder.com/wp-content/themes/moroder/library/fonts/ElegantIcons.eot');
+	src:url('http://giorgiomoroder.com/wp-content/themes/moroder/library/fonts/ElegantIcons.eot?#iefix') format('embedded-opentype'),
+		url('http://giorgiomoroder.com/wp-content/themes/moroder/library/fonts/ElegantIcons.woff') format('woff'),
+		url('http://giorgiomoroder.com/wp-content/themes/moroder/library/fonts/ElegantIcons.ttf') format('truetype'),
+		url('http://giorgiomoroder.com/wp-content/themes/moroder/library/fonts/ElegantIcons.svg#ElegantIcons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+[data-icon]:before {
+	font-family: 'ElegantIcons';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "moroder-heading", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	color: #fc0416;
+	font-weight: 400;
+}
+
+h1 {
+	font-family:"fancy", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;	
+}
+
+#primary h3 {
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 0.85em;
+	font-weight: 400;
+}
+
+h4 {
+	font-family:"fancy", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;		
+}
+
+
+/*********/
+/***NAV***/
+/*********/
+
+#menu {
+	font-family: "moroder-heading","Helvetica Neue",Helvetica,Arial,sans-serif;
+	border-top:1px solid #000;
+	width:100%;
+}
+#menu ul {
+	margin:0 auto;
+	padding:0;
+}
+#menu li {
+	display:inline-block;
+	list-style-type:none;
+	margin: 0;
+	transition: background-color 300ms ease-out 0s;
+}
+#menu li.menu-item {}
+#menu li a {
+	color: #000;
+	font-size: 1.2em;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	transition: background-color 200ms ease-out 0s;
+}
+#menu li:last-child a {  margin-right: 0;}
+#menu li a:hover {  color: #FC0416; }
+
+
+
+/*************/
+/***CONTENT***/
+/*************/
+
+#main {	padding-top: 1.5em; }
+#primary #content { margin-bottom:0; }
+#primary .row {	margin-bottom: 1.875em;}
+#primary h2 {
+	background: none repeat scroll 0 0 #FFFFFF;
+	border-bottom: 2px solid #000;
+	color: #000000;
+	font-size: 1.5em;
+	line-height: 1.1em;
+	margin-bottom: 0.5em;
+	margin-top: 0;
+	padding: 0.3em 0 0.2em 0.5em;
+	text-transform: uppercase;
+}
+
+#primary h2 .title {}
+
+#primary h2 .button {
+	float: right;
+	font-size: 0.6em;
+	letter-spacing: 2px;
+	margin: 0.4em 0 0 1.5em;
+}
+#primary p {
+	line-height: 1.2em;
+}
+
+#primary .button {
+	background: none repeat scroll 0 0 #5B2F66;
+	border: medium none;
+	box-shadow: none;
+	color: #FFFFFF;
+	float: right;
+	font-family: "moroder-heading","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 0.9em;
+	font-weight: 400;
+	letter-spacing: 1px;
+	margin-bottom: 0.5em;
+	padding: 0.8em 1em;
+	transition: background-color 300ms ease-out 0s;
+	width: auto;
+}
+#primary .button:hover {
+	color: #FFF;
+	background: #C36010;
+}
+#primary a {
+	transition: background-color 300ms ease-out 0s;
+}
+#primary a:hover {}
+#primary img {
+	border-style: none;
+	height: auto;
+}
+
+.entry-footer {
+	display: none
+}
+.entry-body {
+	border: none;
+}
+.nav-single {
+	display: none;
+}
+#comments {
+	display: none;
+}
+.sounds iframe {
+	margin-bottom:1em;	
+}
+
+
+/************************/
+/***HOME PAGE ELEMENTS***/
+/************************/
+
+#primary .home-photos img {margin-right:7px;}
+
+.home-boxes .big-buttons {
+	font-family: font-family: "moroder-heading","Helvetica Neue",Helvetica,Arial,sans-serif;	
+	min-height: 10em;
+	margin-bottom:1.875em;
+	width:100%;
+	float:left;
+	
+}
+.home-boxes .last .big-buttons {
+	margin-bottom:0;	
+}
+
+.home-boxes h3 {
+	font-size:2.5em;
+	color:#fff;	
+}
+.home-boxes .home-discog { min-height:33.75em;}
+/*.home-boxes .home-discog h3 {  
+	  -ms-transform:rotate(90deg); 
+	  -moz-transform:rotate(90deg);
+	  -webkit-transform:rotate(90deg); 
+	  -o-transform:rotate(90deg); 
+}
+*/
+.home-boxes .home-music		{background: #f47107;}
+.home-boxes .home-news		{background: #08c11e;}
+.home-boxes .home-videos	{background: #79752c;}
+.home-boxes .home-discog 	{background: #fa9f06;}
+.home-boxes .home-events 	{background: #0846f9;}
+.home-boxes .home-bio 		{background: #dc3def;}
+.home-boxes .home-dj 		{background: #94510a;}
+.home-boxes .home-photos 	{background: #f90d35;}
+.home-boxes .home-tour 		{background: #096210;}
+
+.home-boxes .big-buttons:hover {
+	background:#616161;
+}
+
+
+
+/*************************/
+/***EVENTS / TOUR / DJ ***/
+/*************************/
+
+.event { 
+	border-top: 1px solid #FFFFFF;
+	clear: left;
+	color: #FFFFFF;
+	float: left;
+	font-weight: 700;
+	margin-bottom: 0;
+	padding-top: 0.75em;
+	width: 100%;
+}
+.event:first-of-type { 	/*padding-top:0;*/ }
+.event:last-of-type { 	/*border-bottom:2px solid #fff;*/}
+	
+.event-date {
+	background: none repeat scroll 0 0 #000000;
+	clear: left;
+	color: #FFFFFF;
+	float: left;
+	font-size: 0.8em;
+	font-weight: 400;
+	letter-spacing: 0;
+	margin: 0 0 0.3em;
+	padding: 0;
+	text-align: left;
+}
+	
+	.event-date-m { /*font-size:1.7em; display:block;*/}
+	.event-date-d { /*font-size:3em; display:block; margin-top:-7px;*/}
+	.event-date-y { 
+		/*font-size: 1.1em;
+		margin-top: -4px;
+		letter-spacing: 3px;*/}			
+	
+	.event-name { 
+		float: left; clear:left;	}
+	.event-city {
+		clear: left;
+		float: left;
+		font-size: 0.8em;
+		font-weight: 400;
+		margin: 0.3em 0 0;
+	}
+	.event .button { background:#00e;}
+.event-listing p { font-size:0.9em; padding-top:0.8em;}
+
+
+
+/*****************************/
+/***DISCOG & MUSIC & VIDEOS***/
+/*****************************/
+
+#discog-nav {
+	overflow:auto;
+	margin-bottom:1.6em;
+}
+
+#single-nav-right a, 
+#single-nav-left a,
+#music-nav .wp-pagenavi a,
+#music-nav .wp-pagenavi .current
+ {
+	background: none repeat scroll 0 0 #000;
+	border-radius: 5px;
+	color: #FFFFFF;
+	font-family: "moroder-heading","Open Sans","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+	font-size: 1.0em;
+	padding: 0.6em 1em;
+	text-transform: uppercase;
+	border: 2px solid #fff;
+	transition: background-color 200ms ease-out 0s;
+}
+
+.wp-pagenavi .extend {display:none;}
+
+#single-nav-right a:hover, 
+#single-nav-left a:hover,
+#music-nav .wp-pagenavi a:hover,
+#music-nav .wp-pagenavi .current {
+	color:#FC0416;
+	background:#fff;
+}
+
+#music-nav {margin-bottom:1.6em;}
+
+
+#single-nav-left a {
+	float:left;	
+}
+#single-nav-right a {
+	float:right;	
+}
+
+.single-discography #primary h4,
+.single-music #primary h4 {
+	color: #FFFFFF;
+	font-size: 2.9em;
+	letter-spacing: -2px;
+	line-height: 0.9em;
+	margin-bottom: 0.3em;
+	margin-top:0.3em;
+}
+
+.single-discography #primary h2,
+.single-music #primary h2{
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+	color: #FC0416;
+	font-family: "fancy","Open Sans","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+	font-size: 2.3em;
+	margin-bottom: 0;
+	padding: 0;
+	text-transform: none;
+	letter-spacing: -2px;
+	line-height: 1em;
+}
+
+.single-music #primary h2 { font-size:1.5em; color:#fff; }
+
+.single-music #primary h5,
+.post-type-archive-music #primary h3,
+.post-type-archive-videos #primary h3  {
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+	color: #FC0416;
+	font-family: "fancy","Open Sans","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+	font-size: 2.8em;
+	margin-bottom: 0;
+	padding: 0;
+	text-transform: none;
+	letter-spacing: -1px;
+	line-height: 1em;
+}
+
+.post-type-archive-music #primary h3 {font-size: 1.9em; margin-bottom:1.5em; }
+.post-type-archive-music #primary h3 a {/*color:#FC0416;*/ text-decoration:underline; }
+
+.post-type-archive-videos #primary h3 {font-size: 1.9em; margin-bottom:0.3em; }
+.post-type-archive-videos #primary p { margin-bottom:3em; }
+
+
+.single-discography #primary h3,
+.single-music #primary h3 {
+	font-size: 2.2em;
+	font-family:"fancy", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	color:#fff;	
+	margin-top:0;
+}
+
+.single-music #primary h3 { font-size:1.5em; }
+
+.single-discography #primary h5 {
+	background: none repeat scroll 0 0 #FFFFFF;
+	color: #000000;
+	font-size: 1.2em;
+	padding: 0.3em;
+	text-transform: uppercase;
+	margin-bottom:0.2em;  
+}
+
+.post-type-archive-music #primary h2 {
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+	border-bottom: 1px solid #FFFFFF;
+	border-top: 1px solid #FFFFFF;
+	color: #FFFFFF;
+	font-size: 1.2em;
+	margin-bottom: 0.2em;
+	padding: 0.1em 0 0.2em;
+	text-transform: uppercase;
+}
+
+.post-type-archive-music #primary h2 {
+	text-transform:none;	
+}
+
+.single-discography #primary p {
+	font-family:"Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	font-size:1.0em;
+	line-height:1.3em;
+
+}
+.single-discography #primary .wp-post-image {
+	padding:3px;
+	background:#fff;	
+}
+
+.single-discography #primary .discog-music .row {
+	margin-bottom:0.5em;	
+}
+.single-discography #primary .discog-music p {
+	margin-bottom:0;	
+}
+
+
+.post-type-archive-discography #Filters h4 {
+  clear: both;
+  color: #FFFFFF;
+  float: left;
+  font-family: "moroder-heading","Open Sans","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+  font-size: 1.3em;
+  margin-right: 1em;
+  text-transform: uppercase;
+}
+.post-type-archive-discography #Grid h4 {
+  color: #FFFFFF;
+  font-family: "moroder-heading","Open Sans","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+  font-size: 1.3em;
+  margin-bottom:0.1em;
+  text-align:left;
+  line-height:1em; 
+}
+.post-type-archive-discography #Grid h5 {
+  font-family: "moroder-heading","Open Sans","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+  font-size: 1.0em;
+  margin-bottom:0.1em;
+  text-align:left;
+  line-height:1em;
+}
+.post-type-archive-discography #Grid h6 {
+  color: #FFFFFF;
+  font-family: "moroder-heading","Open Sans","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+  font-size: 0.8em;
+  margin-bottom:0.1em;
+}
+
+
+.single-discography .related-songs-header {
+	margin-top:1.875em;
+	margin-bottom:1.875em;		
+}
+
+
+
+
+/*********/
+/***BIO***/
+/*********/
+
+
+#primary .biography .entry-content {
+	-moz-column-count:2; 
+	-webkit-column-count:2;
+	column-count:2;
+	-moz-column-gap:4em; 
+	-webkit-column-gap:4em; 
+	column-gap:4em;
+	-moz-column-rule:1px solid #FFF;
+	-webkit-column-rule:1px solid #FFF;
+	column-rule:1px solid #FFF;
+}
+
+#primary .biography .entry-content p{
+	line-height:1.4em;	
+}
+
+
+/**********/
+/***NEWS***/
+/**********/
+
+
+#primary .rfbp-post-link-wrap {
+	background: #fff;
+	padding: 1em;
+	border-radius:5px;
+}
+#primary .rfbp-post {
+	border-bottom: 2px solid #FFF;
+	margin-bottom: 2em;
+	/*margin-top: 2em;*/
+	padding-bottom: 2em;
+	padding-top: 0;
+}
+.juiz_last_tweet_tweetlist { margin:0; }  
+.juiz_last_tweet_tweetlist .user_avatar { display: none; }  
+.juiz_last_tweet_item { 
+	list-style: none outside none;
+	margin-bottom: 1em;
+	border-bottom: 1px dotted #fff;
+	padding-bottom: 1em;
+}
+.juiz_last_tweet_footer_item { 
+	display:block; 
+	margin-top:0.5em;
+	font-size:0.75em;
+}
+   
+.juiz_last_tweet_tweetos { color:#FFF; }  
+.juiz_last_tweet_hastag { 
+	color: #FFFFFF;
+	font-weight: 700;
+}  
+.juiz_last_tweet_url { color:#FC0416; }
+
+.juiz_action_links { display:none; margin-top:0.5em; }
+.juiz_al_reply { color:#fff; }
+.juiz_al_retweet { color:#fff;}
+.juiz_al_fav {color:#fff; }
+.juiz_ltw_source { display:none;} 
+
+
+/************/
+/***PHOTOS***/
+/************/
+
+#primary .photos p {
+	color:#000;
+}
+
+
+
+
+
+
+/*************/
+/***SIDEBAR***/
+/*************/
+
+.sidebar-widget {
+	margin-bottom:2em;	
+	overflow:auto;
+}
+#sidebar .sidebar-widget h2{}
+
+
+
+
+/*****************/
+/***EVENTS PAGE***/
+/*****************/
+
+body.page-template-page-templatesmoroder-events-php #content img {
+	margin-top:1.9em;	
+}
+
+
+
+
+/**********************/
+/***CONTACT TEMPLATE***/
+/**********************/
+#contact {
+	background: #69EAF8;
+	color: #fff;
+	padding: 2em 0;
+}
+#contact h2 {
+	color: #fff;
+}
+#contact .wpcf7-submit {
+	font-size: 1.1em;
+	padding: 1.1em 1.7em;
+}
+#contact-form {
+	padding: 0;
+}
+#contact-form label {
+	display: none;
+}
+.button {
+	background-color: #0077b7;
+	color: #FFF;
+}
+.button:hover {
+	background-color: #FED531;
+	color: #000;
+}
+.contact-info {
+	font-size: 0.7em;
+}
+.contact-info ul {
+	margin-left: 0;
+}
+.contact-info li {
+	list-style: none;
+	margin-bottom: 1em;
+}
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
+	-moz-box-sizing: border-box;
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: none;
+	border-radius: 4px 4px 4px 4px;
+	box-shadow: none;
+	color: #CCCCCC;
+	display: block;
+	font-family: "Open Sans", "Helvetica", "Arial";
+	font-size: 1.8em;
+	font-style: italic;
+	margin-bottom: 1em;
+	width: 100%;
+}
+
+
+/************/
+/***FOOTER***/
+/************/
+
+#footer {
+	font-family: "moroder-heading", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	padding: 0 0 1em;
+	text-align: right;
+	float: none;
+
+	color:#515151;
+	text-transform:uppercase;
+}
+#footer .foot-wrap { 	border-top: 2px solid #fff; padding-top:1em; padding-left:0; padding-right:0;}
+#footer .horizontal-nav {
+	list-style:none;
+	margin:0;
+	border-top: 2px solid #fff;
+}
+#footer .horizontal-nav li {
+	display:inline-block;
+ 	margin-right:1em;
+}
+#footer .horizontal-nav li a{
+	color:#fff;
+	text-transform:uppercase;
+}
+#footer a{
+	color:#515151;
+}
+#footer a:hover{
+	color:#FC0416;
+}
+
+
+
+#footer .section {
+	width: 33.333333333%;
+}
+#footer .section-container .section .title a {
+	text-align: center;
+	transition: background-color 300ms ease-out 0s;
+	width: 97%;
+	background: none repeat scroll 0 0 #ff8218;
+	border: 1px solid #ff8218;
+	border-radius: 4px 4px 4px 4px;
+	color: #FFFFFF;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	padding: 0.4em 1.3em;
+	transition: background-color 300ms ease-out 0s;
+}
+
+
+		
+/*******************/
+/***MEDIA QUERIES***/
+/*******************/
+
+	
+/* SMALL MOBILE */
+	
+	@media only screen and (max-width:305px) {
+		.section-container .section {
+			width: 100%;
+		}
+}
+
+
+
+/* ABOVE SMALL MOBILE */
+
+	@media only screen and (min-width:305px) {
+		.section-container .section {
+			width: 33.3333333333%;
+		}
+}
+
+/* MEDIUM MOBILE */
+
+	@media only screen and (min-width:306px) and (max-width:400px) {
+		.section-container .section .title a,  #footer .section-container .section .title a {
+			padding: 0.9em 0.1em;
+		}
+}
+
+
+/* LARGE MOBILE */
+
+	@media only screen and (max-width:640px) and (min-width:401px) {
+}
+
+
+/* ALL MOBILE */
+	@media only screen and (max-width:640px) {
+		.site-header { border-bottom:none; margin-bottom:1em;}
+		.site-header .site-logo {
+			text-align: center;
+			margin-top:0.5em;
+		}
+		.site-header .site-logo img{
+			padding:0.4em;
+		}
+		.site-header .site-nav {
+			margin-bottom: 0.4em;
+		}
+
+		#menu {
+			padding-top: 0.3em;
+			float: left;
+			width: 100%;
+			display:none;
+			border:none;
+		}
+		.site-header .site-social		{	margin-top: 0.5em; 		}
+		.site-header .site-social li 	{	margin: 0 0.4em 0 0; 						}
+		.site-social ul {  float: right;}
+	
+		#menu li a {
+			background: none repeat scroll 0 0 #000000;
+			border-radius: 5px;
+			color: #FFFFFF;
+			float: left;
+			font-size: 1.2em;
+			margin-bottom: 0;
+			margin-right: 1.5em;
+			padding: 0.2em 0.5em;
+			width: 100%;
+		}		
+		.site-header .mobilenav {
+			  background: none repeat scroll 0 0 #000000;
+			  border-radius: 5px;
+			  color: #FFFFFF;
+			  float: left;
+			  font-size: 2em;
+			  line-height: 0.1em;
+			  margin-left: 0.5em;
+			  padding: 4px 0 0 1px;
+		}
+
+		.wp-pagenavi .first,
+		.wp-pagenavi .smaller,
+		.wp-pagenavi .larger,
+		.wp-pagenavi .last { display:none; }
+		
+		#primary .biography .entry-content {
+			-moz-column-count:1; 
+			-webkit-column-count:1;
+			column-count:1;
+		}
+		.post-type-archive-music #primary h3 {
+			margin-bottom: 0.5em;
+		}
+		.post-type-archive-music #primary h2 {
+			margin-top: 1em;
+		}
+		.single-discography #primary .related-songs p {
+ 			margin-bottom:0;	
+		}
+		.single-discography #primary .related-songs h2 {
+ 			margin-bottom:1em;	
+		}
+		
+		
+		
+}
+
+
+
+/* MEDIUM GRID AND ABOVE */
+	@media only screen and (min-width: 641px) {
+		/*.section-container .section {
+			width: auto;
+			padding: 0.5em 0.5em 0;
+			border: none;
+		}*/
+}
+
+/* INSIDE MEDIUM GRID */
+/* SMALL HALF OF MEDIUM GRID */
+
+	@media only screen and (min-width: 641px) and (max-width:800px) {
+		#menu {
+			/*padding-top: 0.8em;*/
+		}
+/*		.section-container .section .title a {
+			background: none repeat scroll 0 0 #ff8218;
+			border: 1px solid #ff8218;
+			border-radius: 4px 4px 4px 4px;
+			color: #FFFFFF;
+			font-size: 0.65em;
+			font-weight: 400;
+			letter-spacing: 0.1em;
+			padding: 1.2em 0.8em;
+			transition: background-color 300ms ease-out 0s;
+			width: auto;
+		}
+*/}
+
+/* INSIDE MEDIUM GRID */
+/* LARGER HALF OF MEDIUM GRID*/
+
+	@media only screen and (min-width: 801px) and (max-width:1024px) {
+		#menu {}
+}
+
+
+
+	@media only screen and (min-width: 641px) and (max-width:679px) {
+		.site-header .site-logo 		{ 	margin: 0.9em 0 0; 		width:75%; 			}
+		.site-header .site-social		{	margin-top: 0.5em; 		width: 75%;			}
+		.site-header .site-social li 	{	margin: 0 0.4em 0 0; 						}
+		.site-social ul {  float: left;}
+		#menu li a {
+			  background: none repeat scroll 0 0 #000000;
+			  border-radius: 5px;
+			  color: #FFFFFF;
+			  float: left;
+			  font-size: 1em;
+			  margin-bottom: 0;
+			  margin-right: 1.5em;
+			  padding: 0.1em 0.3em;
+		}
+		#menu {border:none;}
+		.site-header .site-logo-head {  margin: 1.6em 0;}
+}	
+	@media only screen and (min-width: 680px) and (max-width:749px) {
+		.site-header .site-logo 		{ 	margin: 1.3em 0 0; 		width:75%; 			}
+		.site-header .site-social		{	margin-top: 0.5em; 		width: 75%;			}
+		.site-header .site-social li 	{	margin: 0 0.4em 0 0; 						}
+		.site-social ul {  float: left;}
+		#menu li a {
+			  background: none repeat scroll 0 0 #000000;
+			  border-radius: 5px;
+			  color: #FFFFFF;
+			  float: left;
+			  font-size: 1em;
+			  margin-bottom: 0;
+			  margin-right: 2.5em;
+			  padding: 0.1em 0.3em;
+		}
+		#menu {border:none;}
+		.site-header .site-logo-head {  margin: 1.6em 0;}
+}	
+	@media only screen and (min-width: 750px) and (max-width:789px) {
+		.site-header .site-logo 		{ 	margin: 2em 0 0; 		width:50%; 			}
+		.site-header .site-social		{	margin-top: 2.5em; 		width: 25%;			}
+		.site-header .site-social li 	{	margin: 0 0.1em 0 0; 						}
+		#menu li a {
+			background: none repeat scroll 0 0 #000000;
+			border-radius: 5px;
+			color: #FFFFFF;
+			float: left;
+			font-size: 1.1em;
+			margin-bottom: 0;
+			margin-right: 2.2em;
+			padding: 0.1em 0.5em;
+		}		
+		#menu {border:none;}
+
+
+}	@media only screen and (min-width: 790px) and (max-width:849px) {
+		.site-header .site-logo 		{ 	margin: 3.5em 0 0; 		width:50%; 			}
+		.site-header .site-social		{	margin-top: 4.0em; 		width: 25%;			}
+		.site-header .site-social li 	{	margin: 0 0.15em 0 0; 						}
+		#menu li a 						{	margin-right: 1em;	font-size: 1.0em;	}
+
+}
+	@media only screen and (min-width: 850px) and (max-width:949px) {
+		.site-header .site-logo 		{	margin: 3.5em 0 0; 		width:50%; 			}
+		.site-header .site-social		{	margin-top: 4.1em; 		width: 25%;			}
+		.site-header .site-social li	{	margin: 0 0.4em 0 0;						}
+		#menu li a 						{	margin-right: 1em;	font-size: 1.1em;	}
+}
+	@media only screen and (min-width: 950px) and (max-width:1024px) {
+		.site-header .site-logo 		{ 	margin: 3.5em 0 0;	 						}
+		.site-social 					{	margin-top: 4.1em; 							}
+		#menu li a 						{	margin-right: 1.15em;						}
+}
+
+
+
+/* ONLY MEDIUM GRID */
+
+	@media only screen and (min-width: 641px) and (max-width:1024px) {
+		#site-header .site-logo {
+			text-align: right;
+		}
+		#site-header .site-logo a {
+			height: 3em;
+		}
+		#site-header .site-logo img {
+			height: 3em;
+		}
+		#site-header .site-nav {
+			text-align: right;
+		}
+		#menu {
+			width: auto;
+		}
+}
+
+
+/* MEDIUM GRID DOWN */
+	 @media only screen and (min-width: 1025px) {}
+
+
+
+
+/* ONLY LARGE GRID */
+	@media only screen and (min-width: 1025px) {
+
+		#menu li a {
+			margin-right: 2.05em;
+		}
+				
+				
+				
+		.section-container .section {
+			width: auto;
+			padding: 2px;
+			border: none;
+		}
+		.section-container.horizontal-nav {
+			background: none;
+			border: none;
+			padding-top: 2px;
+		}
+		.section-container.horizontal-nav .section .title {
+			position: relative;
+			border: none;
+		}
+		.section-container.horizontal-nav .section {
+			margin-right: 0.4em;
+		}
+		#footer .section-container.horizontal-nav .section {
+			margin-right: 0;
+		}
+		.section-container.horizontal-nav [class*="section"] + [class*="section"]:last-child {
+			margin-right: 0;
+		}
+		#menu {
+			/*padding-top: 2.8em;*/
+		}
+}
